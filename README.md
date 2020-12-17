@@ -63,11 +63,3 @@ You can handle this... right? The planet Earth needs to know what we have found!
 ### Copyright
 
 Trilogy Education Services © 2019. All Rights Reserved.
-
-
-
----
-
-This is Level 1: 
-
-have the data set is array of objects, loop through them and create a table out of it, values from keys become values for the table. use bootstrap to create different row colors, place holder for filter that will search through the data.
