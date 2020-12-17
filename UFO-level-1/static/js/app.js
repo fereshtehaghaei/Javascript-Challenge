@@ -9,12 +9,10 @@ const tableData = data;
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 
-// // stops the page refresh on "Enter" button
-// d3.event.preventDefault(); 
-
-
+//******************************************************************************************************/
 // Using the UFO dataset provided in the form of an array of JavaScript objects
 // write code that appends a table to a web page and then adds new rows of data for each UFO sighting.
+//******************************************************************************************************/
 
 // Step 1:
 // create a function to built table with data
