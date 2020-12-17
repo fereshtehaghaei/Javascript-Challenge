@@ -15,12 +15,12 @@ var tbody = d3.select("tbody");
 //******************************************************************************************************/
 
 // Step 1:
-// create a function to built table with data
 
+// create a function to built table with data
 function buildTable(table){
 
-// Loop Through `data` 
-table.forEach((item) => {
+    // Loop Through `data` 
+    table.forEach((item) => {
 
     // Actively Append Table Row `tr` to the Table Body `tbody`
     let row = tbody.append("tr");
@@ -47,23 +47,22 @@ table.forEach((item) => {
 
 function handleClick() {
 
+    // stops the page refresh on "Enter" button
     d3.event.preventDefault();
 
     // clears the data of the current table   
     tbody.html("");
 
-    var filterData = tableData
+    var filteredData = tableData
 
     // Select the input element and get the value property of the input element
     var input = d3.select("#datetime").property("value");
 
     // create a if statement for the filter
     if(input){
-
-        filterData = filterData.filter(result => result.datetime === input);
-
+        filteredData = filteredData.filter(result => result.datetime === input);
         // build table with filterData
-        buildTable(filterData);
+        buildTable(filteredData);
     }
     
 }
