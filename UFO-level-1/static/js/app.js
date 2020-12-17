@@ -49,6 +49,8 @@ table.forEach((item) => {
 
 function handleClick() {
 
+    d3.event.preventDefault();
+
     // clears the data of the current table   
     tbody.html("");
 
@@ -61,6 +63,7 @@ function handleClick() {
     if(input){
 
         filterData = filterData.filter(result => result.datetime === input);
+
         // build table with filterData
         buildTable(filterData);
     }
@@ -68,9 +71,12 @@ function handleClick() {
 }
 
 
-// Assigning an action to button when it's clicked. 
+// Assigning an action to button when it's clicked
 // This is our Listner Function
 d3.select("#filter-btn").on("click", handleClick);
+
+// Assigning an action to when user hits enter key
+d3.select("form").on("submit", handleClick);
 
 // Call build the table function at the end 
 buildTable(tableData);
