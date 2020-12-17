@@ -52,15 +52,37 @@ function handleClick() {
 
     var filteredData = tableData
 
-    // Select the input element and get the value property of the input element
-    var input = d3.select("#datetime").property("value");
+    // 1st: Select the input element and get the value property of the input element
+    // 2nd: Create an if statement for the input filter
 
-    // create an if statement for the filter
-    if(input){
-        filteredData = filteredData.filter(result => result.datetime === input);
-        // build table with filterData
-        buildTable(filteredData);
+    var date = d3.select("#datetime").property("value");
+    if(date){
+        filteredData = filteredData.filter(result => result.datetime === date);
     }
+
+    var city = d3.select("#city").property("value");
+    if(city){
+        filteredData = filteredData.filter(result => result.city === city);
+    }
+
+    var state = d3.select("#state").property("value");
+    if(state){
+        filteredData = filteredData.filter(result => result.state === state);
+    }
+
+    var country = d3.select("#country").property("value");
+    if(country){
+        filteredData = filteredData.filter(result => result.country === country);
+    }
+
+    var shape = d3.select("#shape").property("value");
+    if(shape){
+        filteredData = filteredData.filter(result => result.datetime === shape);
+    }
+
+
+    // build table with filterData
+    buildTable(filteredData);
     
 }
 
