@@ -38,13 +38,14 @@ function buildTable(table){
   });
 }
 
-
+//******************************************************************************************************/
 // Use a date form in your HTML document and write JavaScript code that will listen for events 
 // and search through the `date/time` column to find rows that match user input.
+//******************************************************************************************************/
 
 // Step 2: 
-// filter the table 
 
+// filter the table 
 function handleClick() {
 
     // stops the page refresh on "Enter" button
