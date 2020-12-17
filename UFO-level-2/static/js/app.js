@@ -77,22 +77,28 @@ function handleClick() {
 
     var shape = d3.select("#shape").property("value");
     if(shape){
-        filteredData = filteredData.filter(result => result.datetime === shape);
+        filteredData = filteredData.filter(result => result.shape === shape);
     }
-
 
     // build table with filterData
     buildTable(filteredData);
-    
+
 }
 
+function pageRefresh() {
+location.reload();
+return false;
+}
+
+// Call build the table function at the end 
+buildTable(tableData);
 
 // Assigning an action to button when it's clicked
 // This is our Listner Function
 d3.select("#filter-btn").on("click", handleClick);
 
-// Assigning an action to when user hits enter key
-d3.select("form").on("submit", handleClick);
+// // Assigning an action to when user hits enter key
+d3.select("#ufo-form").on("submit", handleClick);
 
-// Call build the table function at the end 
-buildTable(tableData);
+d3.select("#page-btn").on("click", pageRefresh);
+
