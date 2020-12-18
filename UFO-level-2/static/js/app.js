@@ -90,15 +90,17 @@ location.reload();
 return false;
 }
 
-// Call build the table function at the end 
-buildTable(tableData);
+
 
 // Assigning an action to button when it's clicked
 // This is our Listner Function
 d3.select("#filter-btn").on("click", handleClick);
 
-// // Assigning an action to when user hits enter key
-d3.select("#ufo-form").on("submit", handleClick);
 
 d3.select("#page-btn").on("click", pageRefresh);
 
+// Assigning an action to when user hits enter key
+d3.select("#ufo-form").on("submit", handleClick);
+
+// Call build the table function at the end 
+buildTable(tableData);

@@ -138,6 +138,12 @@ select {
   color: #8e979f;
 }
 
+.table-striped tbody tr:hover td {
+  
+  background: rgba(1, 10, 61, 0.918);
+}
+
+
 /* media queries which will only be activated at specific screen sizes */
 @media (max-width: 800px) {
   #table-area td {
