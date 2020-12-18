@@ -70,7 +70,6 @@ function handleClick() {
     
 }
 
-
 // Assigning an action to button when it's clicked
 // This is our Listner Function
 d3.select("#filter-btn").on("click", handleClick);
