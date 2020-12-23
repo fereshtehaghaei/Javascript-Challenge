@@ -101,8 +101,8 @@ d3.select("#filter-btn").on("click", handleClick);
 
 d3.select("#page-btn").on("click", pageRefresh);
 
-// Assigning an action to when user hits enter key
-d3.select("#ufo-form").on("submit", handleClick);
+// Assigning an action to when user hits enter key //change: moving focus
+d3.select("#ufo-form").on("change", handleClick);
 
 // Call build the table function at the end 
 buildTable(tableData);
